@@ -7,6 +7,7 @@
 */
 :root {
   --main-color: #4682b4;
+  --bg-color: #F3F5FC;
   --warning-color: #495057;
 
   --text-btnEncrypt-color: #fff;
@@ -41,6 +42,7 @@ body {
   min-height: 100dvh;
   font-size: 1.6rem;
   font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-color);
 }
 
 button,
@@ -90,32 +92,35 @@ svg {
   margin: 0 auto;
 }
 
-
 /*
 =============== 
  Section crypto-tools 
 ===============
 */
+.crypto-tools {
+  margin-bottom: 64px;
+}
+
 .logo {
   padding: 2.4rem 0 2.4rem 0;
+}
+@media (min-width: 768px) {
+
 }
 
 .crypto-tools textarea {
   color: var(--main-color);
   font-size: 3.2rem;
   width: 343px;
-
-  height: 250px;
+  min-height: 250px;
+  max-height: 624px;
   resize: none;
   border: none;
-  /* Elimina el borde */
   overflow: hidden;
-  /* Oculta la barra de desplazamiento */
   outline: none;
   margin-top: 56px;
-  /* overflow-wrap: break-word; */
-  /* field-sizing: content; */
-
+  field-sizing: content;
+  background-color: var(--bg-color);
 }
 
 .crypto-tools textarea::placeholder {
@@ -176,4 +181,30 @@ svg {
 .btn-decrypt:hover {
   background: #f3f1f1f3;
 
+}
+
+/*
+=============== 
+ Section display-text-decrypt
+===============
+*/
+.display-text-decrypt {
+  width: 327px;
+  min-height: 186px;
+  background-color: #fff;
+  padding: 3.2rem;
+  margin-bottom: 4rem;
+  border-radius: 32px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 24px 32px -8px
+}
+
+.display-text-decrypt h3 {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 1.6rem;
+  white-space: normal;
+}
+
+.display-text-decrypt p {
+  text-align: center;
 }
