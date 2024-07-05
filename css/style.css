@@ -91,6 +91,12 @@ svg {
   width: min(92%, 144rem);
   margin: 0 auto;
 }
+@media (min-width: 768px) {
+  .container {
+    width: min(89.5%, 144rem);
+    
+  }
+}
 
 /*
 =============== 
@@ -105,7 +111,9 @@ svg {
   padding: 2.4rem 0 2.4rem 0;
 }
 @media (min-width: 768px) {
-
+  .logo {
+    padding-top: 7.3rem;
+  }
 }
 
 .crypto-tools textarea {
@@ -121,6 +129,12 @@ svg {
   margin-top: 56px;
   field-sizing: content;
   background-color: var(--bg-color);
+}
+@media (min-width: 768px) {
+  .crypto-tools textarea {
+    width: 688px;
+    min-height: 548px;
+  }
 }
 
 .crypto-tools textarea::placeholder {
@@ -150,6 +164,12 @@ svg {
   margin-top: 16px;
   row-gap: 2.4rem;
 }
+@media (min-width: 768px) {
+  .container__buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
 
 .btn {
   padding: 2.4rem;
@@ -161,11 +181,23 @@ svg {
   border-radius: 24px;
   text-transform: uppercase;
 }
+@media (min-width: 768px) {
+  .btn {
+    width: 332px;
+    
+  }
+}
 
 .btn-encrypt {
   color: var(--text-btnEncrypt-color);
   border: 2px solid var(--btn-borderColor);
   background: var(--main-color);
+}
+@media (min-width: 768px) {
+  .btn-encrypt {
+    margin-right: 2.4rem;
+    
+  }
 }
 
 .btn-encrypt:hover {
@@ -189,6 +221,8 @@ svg {
 ===============
 */
 .display-text-decrypt {
+  margin-left: auto;
+  margin-right: auto;
   width: 327px;
   min-height: 186px;
   background-color: #fff;
@@ -196,6 +230,12 @@ svg {
   margin-bottom: 4rem;
   border-radius: 32px;
   box-shadow: rgba(0, 0, 0, 0.2) 0 24px 32px -8px
+}
+@media (min-width: 768px) {
+  .display-text-decrypt {
+    width: 688px;
+    min-height: 133px;
+  }
 }
 
 .display-text-decrypt h3 {
