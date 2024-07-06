@@ -98,6 +98,14 @@ svg {
   }
 }
 
+@media (min-width: 1024px) {
+  .main {
+    display: flex;
+    gap: 8rem;
+  }
+}
+
+
 /*
 =============== 
  Section crypto-tools 
@@ -106,6 +114,11 @@ svg {
 .crypto-tools {
   margin-bottom: 64px;
 }
+@media (min-width: 1024px) {
+  .crypto-tools {
+    margin-bottom: 0;
+  }
+}
 
 .logo {
   padding: 2.4rem 0 2.4rem 0;
@@ -113,6 +126,15 @@ svg {
 @media (min-width: 768px) {
   .logo {
     padding-top: 7.3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .logo {
+    padding-top: 4rem;
+  }
+
+  .container__textarea {
+    margin-left: 164.406px;
   }
 }
 
@@ -134,6 +156,12 @@ svg {
   .crypto-tools textarea {
     width: 688px;
     min-height: 548px;
+  }
+}
+@media (min-width: 1024px) {
+  .crypto-tools textarea {
+    margin-top: 112px;
+    height: 669px;
   }
 }
 
@@ -235,6 +263,30 @@ svg {
   .display-text-decrypt {
     width: 688px;
     min-height: 133px;
+  }
+}
+@media (min-width: 1024px) {
+  .display-text-decrypt {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    width: 400px;
+    height: 944px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin-top: 4rem;
+   
+  }
+}
+
+.display-text-decrypt img {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .display-text-decrypt img {
+    display: block;
   }
 }
 

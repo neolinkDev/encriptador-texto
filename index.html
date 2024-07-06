@@ -10,7 +10,7 @@
 <body>
 
   <!-- main -->
-  <main class="container">
+  <main class="main container">
 
     <section class="crypto-tools">
       
@@ -18,28 +18,34 @@
         <img class="logo" src="./assets/jr-logo.svg" alt="JR Logo">
       </div>
 
-      <textarea name="" id="" placeholder="Ingrese el texto aqui" autofocus></textarea>
+      <div class="container__textarea">
 
-      <div class="container__warning">
-        <img class="icon-warning" src="./assets/bi_exclamation-circle-fill.svg" alt="Icono de exclamación">
-        <p class="warning">Solo letras minúsculas y sin acentos</p>
-      </div>
+        <textarea name="" id="" placeholder="Ingrese el texto aqui" autofocus></textarea>
+  
+        <div class="container__warning">
+          <img class="icon-warning" src="./assets/bi_exclamation-circle-fill.svg" alt="Icono de exclamación">
+          <p class="warning">Solo letras minúsculas y sin acentos</p>
+        </div>
+  
+        <div class="container__buttons">
+  
+          <button class="btn btn-encrypt">
+            encriptar
+          </button>
+  
+          <button class="btn btn-decrypt">
+            desencriptar
+          </button>
 
-      <div class="container__buttons">
-
-        <button class="btn btn-encrypt">
-          encriptar
-        </button>
-
-        <button class="btn btn-decrypt">
-          desencriptar
-        </button>
-
+  
+        </div>
       </div>
 
     </section>
 
     <section class="display-text-decrypt">
+
+      <img src="./assets/Muñeco.svg" alt="Imagen muñeco">
 
       <h3>Ningún mensaje fue encontrado</h3>
 
