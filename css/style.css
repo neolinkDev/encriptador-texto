@@ -87,16 +87,16 @@ svg {
  Main
 ===============
 */
-.container {
+/* .container {
   width: min(92%, 144rem);
   margin: 0 auto;
-}
-@media (min-width: 768px) {
+} */
+/* @media (min-width: 768px) {
   .container {
     width: min(89.5%, 144rem);
     
   }
-}
+} */
 
 @media (min-width: 1024px) {
   .main {
@@ -105,23 +105,33 @@ svg {
   }
 }
 
-
 /*
 =============== 
  Section crypto-tools 
 ===============
 */
 .crypto-tools {
+  margin-left: 16px;
+  margin-right: 16px;
   margin-bottom: 64px;
+}
+@media (min-width: 768px) {
+  .crypto-tools {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
 }
 @media (min-width: 1024px) {
   .crypto-tools {
     margin-bottom: 0;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 
 .logo {
-  padding: 2.4rem 0 2.4rem 0;
+  /* margin: 24px 0 24px 0; */
+  padding: 24px 0 24px 0;
 }
 @media (min-width: 768px) {
   .logo {
@@ -131,10 +141,24 @@ svg {
 @media (min-width: 1024px) {
   .logo {
     padding-top: 4rem;
+    padding-left: 8.4rem;
+    padding-bottom: 0;
   }
 
   .container__textarea {
-    margin-left: 164.406px;
+    /* margin-left: 164.406px; */
+  }
+}
+
+.container__textarea {
+  /* margin-top: 56px; */
+  padding-top: 56px;
+}
+@media (min-width: 1024px) {
+  .container__textarea {
+    /* margin-left: 164.406px; */
+    padding-top: 80px;
+    padding-left: 24rem;
   }
 }
 
@@ -142,13 +166,13 @@ svg {
   color: var(--main-color);
   font-size: 3.2rem;
   width: 343px;
-  min-height: 250px;
+  min-height: 251px;
   max-height: 624px;
   resize: none;
   border: none;
   overflow: hidden;
   outline: none;
-  margin-top: 56px;
+  /* margin-top: 56px; */
   field-sizing: content;
   background-color: var(--bg-color);
 }
@@ -160,7 +184,7 @@ svg {
 }
 @media (min-width: 1024px) {
   .crypto-tools textarea {
-    margin-top: 112px;
+    /* margin-top: 112px; */
     height: 669px;
   }
 }
@@ -172,7 +196,7 @@ svg {
 .container__warning {
   display: flex;
   align-items: center;
-
+  margin-top: 53px;
 }
 
 .icon-warning {
@@ -183,7 +207,7 @@ svg {
   font-size: 1.2rem;
   color: var(--warning-color);
   line-height: 1.5;
-
+  
 }
 
 .container__buttons {
@@ -274,8 +298,8 @@ svg {
     
     width: 400px;
     height: 944px;
-    /* margin-left: auto;
-    margin-right: auto; */
+    /* margin-left: auto; */
+    margin-right: 4rem;
     margin-top: 4rem;
    
   }
