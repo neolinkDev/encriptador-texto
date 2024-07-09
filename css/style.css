@@ -91,7 +91,7 @@ svg {
   width: min(92%, 144rem);
   margin: 0 auto;
 } */
-/* @media (min-width: 768px) {
+/* @media (min-width: 735px) {
   .container {
     width: min(89.5%, 144rem);
     
@@ -115,7 +115,7 @@ svg {
   margin-right: 16px;
   margin-bottom: 64px;
 }
-@media (min-width: 768px) {
+@media (min-width: 735px) {
   .crypto-tools {
     margin-left: 40px;
     margin-right: 40px;
@@ -133,7 +133,7 @@ svg {
   /* margin: 24px 0 24px 0; */
   padding: 24px 0 24px 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 735px) {
   .logo {
     padding-top: 7.3rem;
   }
@@ -176,7 +176,7 @@ svg {
   field-sizing: content;
   background-color: var(--bg-color);
 }
-@media (min-width: 768px) {
+@media (min-width: 735px) {
   .crypto-tools textarea {
     width: 688px;
     min-height: 548px;
@@ -216,7 +216,7 @@ svg {
   margin-top: 16px;
   row-gap: 2.4rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 735px) {
   .container__buttons {
     flex-direction: row;
     justify-content: center;
@@ -233,7 +233,7 @@ svg {
   border-radius: 24px;
   text-transform: uppercase;
 }
-@media (min-width: 768px) {
+@media (min-width: 735px) {
   .btn {
     width: 332px;
     
@@ -245,7 +245,7 @@ svg {
   border: 2px solid var(--btn-borderColor);
   background: var(--main-color);
 }
-@media (min-width: 768px) {
+@media (min-width: 735px) {
   .btn-encrypt {
     margin-right: 2.4rem;
     
@@ -283,7 +283,7 @@ svg {
   border-radius: 32px;
   box-shadow: rgba(0, 0, 0, 0.2) 0 24px 32px -8px
 }
-@media (min-width: 768px) {
+@media (min-width: 735px) {
   .display-text-decrypt {
     width: 688px;
     min-height: 133px;
