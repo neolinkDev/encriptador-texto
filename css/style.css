@@ -121,21 +121,6 @@ svg {
   }
 }
 
-
-/* @media (min-width: 735px) {
-  .container {
-    width: min(89.5%, 144rem);
-    
-  }
-} */
-
-/* @media (min-width: 1024px) {
-  .main {
-    display: flex;
-    gap: 8rem;
-  }
-} */
-
 /*
 =============== 
  Section crypto-tools 
@@ -308,7 +293,6 @@ svg {
     flex-direction: column;
     justify-content: center;
     margin-bottom: 0;
-    /* margin-top: 0; */
     margin-right: 0;
   }
 }
@@ -316,12 +300,7 @@ svg {
 @media (min-width: 1280px) {
   .display-text-decrypt {
     width: 400px;
-    /* height: 944px; */
     min-height: 725px;
-    
-    /* margin-right: 4rem;
-    margin-top: 4rem; */
-    
   }
 }
 
@@ -344,214 +323,3 @@ svg {
 .display-text-decrypt p {
   text-align: center;
 }
-
-/* .crypto-tools {
-  margin-left: 16px;
-  margin-right: 16px;
-  margin-bottom: 64px;
-}
-@media (min-width: 735px) {
-  .crypto-tools {
-    margin-left: 40px;
-    margin-right: 40px;
-  }
-}
-@media (min-width: 1024px) {
-  .crypto-tools {
-    margin-bottom: 0;
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-} */
-
-/* .logo {
-  padding: 24px 0 24px 0;
-} */
-/* margin: 24px 0 24px 0; */
-/* @media (min-width: 735px) {
-  .logo {
-    padding-top: 7.3rem;
-  }
-}
-@media (min-width: 1024px) {
-  .logo {
-    padding-top: 4rem;
-    padding-left: 8.4rem;
-    padding-bottom: 0;
-  }
-} */
-
-/* .container__textarea {
-  
-  padding-top: 56px;
-}
-@media (min-width: 1024px) {
-  .container__textarea {
-  
-    padding-top: 80px;
-    padding-left: 24rem;
-  }
-} */
-/* 
-.crypto-tools textarea {
-  color: var(--main-color);
-  font-size: 3.2rem;
-  width: 343px;
-  min-height: 251px;
-  max-height: 624px;
-  resize: none;
-  border: none;
-  overflow: hidden;
-  outline: none;
-  
-  field-sizing: content;
-  background-color: var(--bg-color);
-}
-@media (min-width: 735px) {
-  .crypto-tools textarea {
-    width: 688px;
-    min-height: 548px;
-  }
-} */
-/* @media (min-width: 1024px) {
-  .crypto-tools textarea {
-   
-    height: 669px;
-  }
-}
-
-.crypto-tools textarea::placeholder {
-  color: var(--main-color);
-}
-
-.container__warning {
-  display: flex;
-  align-items: center;
-  margin-top: 53px;
-}
-
-.icon-warning {
-  margin-right: 8px;
-}
-
-.warning {
-  font-size: 1.2rem;
-  color: var(--warning-color);
-  line-height: 1.5;
-  
-}
-
-.container__buttons {
-  display: flex;
-  flex-direction: column;
-  margin-top: 16px;
-  row-gap: 2.4rem;
-}
-@media (min-width: 735px) {
-  .container__buttons {
-    flex-direction: row;
-    justify-content: center;
-  }
-}
-
-.btn {
-  padding: 2.4rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: inline-block;
-  outline: none;
-  border-radius: 24px;
-  text-transform: uppercase;
-}
-@media (min-width: 735px) {
-  .btn {
-    width: 332px;
-    
-  }
-}
-
-.btn-encrypt {
-  color: var(--text-btnEncrypt-color);
-  border: 2px solid var(--btn-borderColor);
-  background: var(--main-color);
-}
-@media (min-width: 735px) {
-  .btn-encrypt {
-    margin-right: 2.4rem;
-    
-  }
-}
-
-.btn-encrypt:hover {
-  background: #4683b4e3;
-}
-
-.btn-decrypt {
-  color: var(--text-btnDecrypt-color);
-  border: 2px solid var(--btn-borderColor);
-  background: transparent;
-}
-
-.btn-decrypt:hover {
-  background: #f3f1f1f3;
-
-} */
-
-/*
-=============== 
- Section display-text-decrypt
-===============
-*/
-/* .display-text-decrypt {
-  margin-left: auto;
-  margin-right: auto;
-  width: 327px;
-  min-height: 186px;
-  background-color: #fff;
-  padding: 3.2rem;
-  margin-bottom: 4rem;
-  border-radius: 32px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 24px 32px -8px
-}
-@media (min-width: 735px) {
-  .display-text-decrypt {
-    width: 688px;
-    min-height: 133px;
-  }
-}
-@media (min-width: 1024px) {
-  .display-text-decrypt {
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-    width: 400px;
-    height: 944px;
-   
-    margin-right: 4rem;
-    margin-top: 4rem;
-   
-  }
-}
-
-.display-text-decrypt img {
-  display: none;
-}
-@media (min-width: 1024px) {
-  .display-text-decrypt img {
-    display: block;
-  }
-}
-
-.display-text-decrypt h3 {
-  font-size: 2.4rem;
-  text-align: center;
-  margin-bottom: 1.6rem;
-  white-space: normal;
-}
-
-.display-text-decrypt p {
-  text-align: center;
-} */
