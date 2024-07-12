@@ -271,7 +271,8 @@ svg {
   margin-top: 6.4rem;
   margin-bottom: 4rem;
   border-radius: 32px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 24px 32px -8px
+  box-shadow: rgba(0, 0, 0, 0.2) 0 24px 32px -8px;
+  word-wrap: break-word;
 }
 @media (min-width: 667px) {
   .display-text-decrypt {

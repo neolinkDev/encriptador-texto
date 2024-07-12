@@ -21,7 +21,7 @@
       
       <div class="container__textarea">
 
-        <textarea name="" id="" placeholder="Ingrese el texto aqui" autofocus></textarea>
+        <textarea name="" id="text" placeholder="Ingrese el texto aqui" autofocus></textarea>
   
         <div class="container__warning">
           <img class="icon-warning" src="./assets/bi_exclamation-circle-fill.svg" alt="Icono de exclamación">
@@ -30,7 +30,10 @@
   
         <div class="container__buttons">
   
-          <button class="btn btn-encrypt">
+          <button 
+            class="btn btn-encrypt"
+            onclick="encryptText()"
+          >
             encriptar
           </button>
   
@@ -44,13 +47,13 @@
 
     </section>
 
-    <section class="display-text-decrypt">
+    <section id="section-decrypt" class="display-text-decrypt">
 
-      <img src="./assets/Muñeco.svg" alt="Imagen muñeco">
+      <img id="image" src="./assets/Muñeco.svg" alt="Imagen muñeco">
 
-      <h3>Ningún mensaje fue encontrado</h3>
+      <h3 id="h3">Ningún mensaje fue encontrado</h3>
 
-      <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+      <p id="p">Ingresa el texto que desees encriptar o desencriptar.</p>
       
     </section>
   
@@ -61,6 +64,6 @@
 
   </footer>
 
-  <script src="./js/index.js.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 </html>
