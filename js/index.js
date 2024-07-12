@@ -28,7 +28,6 @@ function encryptText() {
 
     let character = $text[i];
 
-    // Buscar directamente si el carácter tiene una regla de encriptación
     if (encryptionRules.hasOwnProperty(character)) {
 
       encryptText += encryptionRules[character];
@@ -48,11 +47,19 @@ function encryptText() {
   $displayEncryptText.style.color = '#495057';
   $displayEncryptText.style.textAlign = 'left';
   $sectionDecrypt.style.display = 'block';
-  $displayEncryptText.innerHTML = encryptText;
+  // $displayEncryptText.innerHTML = encryptText;
+  setElementText($displayEncryptText, encryptText)
   
 
   // return encryptText;
 }
 
-
+/**
+ * 
+ * @param {HTMLElement} element 
+ * @param {string} text 
+ */
+function setElementText(element, text) {
+  element.innerHTML = text;
+}
 
