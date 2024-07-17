@@ -72,12 +72,18 @@ function textareaValidation(text) {
   const $warning = d.querySelector('#warning');
 
   /* 
-      Expresión regular
-      - '^' y '$' indican el inicio y el final de la cadena respectivamente.
-      - '[a-z\s]' significa cualquier letra minúscula de la 'a' a la 'z' o un 'espacio'.
-      - '+' indica que el patrón debe aparecer una o más veces.
+      Expresión regular:
+      
+      ^: Indica el inicio de la cadena.
+      [a-zñ\s,\.!¡¿?]: Un conjunto de caracteres permitidos. Esto incluye:
+      a-z: Cualquier letra minúscula de la 'a' a la 'z'.
+      ñ: La letra 'ñ'.
+      \s: Cualquier carácter de espacio en blanco.
+      ,\.!¡¿?: Los caracteres ,, ., !, ¡, ¿, y ?. El punto . se escapa con \ porque el punto tiene un significado especial en las expresiones regulares (coincide con cualquier carácter excepto un salto de línea).
+      +: Indica que el patrón anterior (el conjunto de caracteres) debe aparecer una o más veces.
+      $: Indica el final de la cadena.
   */
-  const lowerCaseWithoutAccents = /^[a-z\s]+$/;
+  const lowerCaseWithoutAccents = /^[a-zñ\s,\.!¡¿?]+$/;
 
   // válida que el textarea no este vacío
   if (!text || text.trim() === '') {
