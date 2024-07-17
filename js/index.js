@@ -13,14 +13,14 @@ const encryptionRules = {
 function encryptText() {
 
   // elementos del DOM
-  const $text = d.querySelector('#text').value;
-  const $image = d.querySelector('#image');
-  const $heading = d.querySelector('#h3');
+  let $text = d.querySelector('#text').value;
+
   const $displayEncryptText = d.querySelector('#p');
-  const $sectionDecrypt = d.querySelector('#section-decrypt');
+  const $containerMessage = d.querySelector('#container-message');
+  const $containerTextDecrypt = d.querySelector('#container-textDecrypt');
 
   // Validaciones
-  if (!validations($text)) return;
+  if (!textareaValidation($text)) return;
   
   let encryptText = '';
 
@@ -38,15 +38,15 @@ function encryptText() {
   }
 
   console.log(encryptText);
-
-  $image.style.display = 'none';
-  $heading.style.display = 'none';
+  
+  $containerMessage.style.display = 'none';
+  $containerTextDecrypt.style.display = 'flex';
   $displayEncryptText.style.fontSize = '24px';
   $displayEncryptText.style.color = '#495057';
   $displayEncryptText.style.textAlign = 'left';
-  $sectionDecrypt.style.display = 'block';
-  // $displayEncryptText.innerHTML = encryptText;
+  $displayEncryptText.innerHTML = encryptText;
   setElementText($displayEncryptText, encryptText);
+  $text = d.querySelector('#text').value = '';
 
   // return encryptText;
 }
@@ -67,7 +67,7 @@ function setElementText(element, text) {
  * @param {string} text
  * @returns {boolean}
  */
-function validations(text) {
+function textareaValidation(text) {
   
   const $warning = d.querySelector('#warning');
 
