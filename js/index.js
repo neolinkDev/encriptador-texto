@@ -56,8 +56,13 @@ function decryptText() {
   // Validaciones
   if (!textareaValidation($text)) return;
 
+  // devuelve un array de keys que iteramos
   Object.keys(decryptionRules).forEach((char) => {
+    
+    // define el patrón de busqueda con la variable `char` que son las `key` del objeto `decryptionRules`
     const regex = new RegExp(char, 'g');
+
+    // `replace` busca en el texto todas las ocurrencias que coincidan con la `regex` y las reemplaza con el valor del segundo argumento que son las reglas de desencriptación
     $text = $text.replace(regex, decryptionRules[char]);
   });
 
@@ -141,7 +146,7 @@ function updateDOMElements(text){
   setElementText(displayEncryptText, text); 
 
   // Limpia el textarea
-  document.querySelector('#text').value = '';
+  d.querySelector('#text').value = '';
 
 }
 
