@@ -10,14 +10,18 @@ const encryptionRules = {
   u: 'ufat',
 };
 
+const decryptionRules = {
+  'ai': 'a',
+  'enter': 'e',
+  'imes': 'i',
+  'ober': 'o',
+  'ufat': 'u'
+};
+
 function encryptText() {
 
   // elementos del DOM
   let $text = d.querySelector('#text').value;
-
-  const $displayEncryptText = d.querySelector('#p');
-  const $containerMessage = d.querySelector('#container-message');
-  const $containerTextDecrypt = d.querySelector('#container-textDecrypt');
 
   // Validaciones
   if (!textareaValidation($text)) return;
@@ -38,17 +42,27 @@ function encryptText() {
   }
 
   console.log(encryptText);
-  
-  $containerMessage.style.display = 'none';
-  $containerTextDecrypt.style.display = 'flex';
-  $displayEncryptText.style.fontSize = '24px';
-  $displayEncryptText.style.color = '#495057';
-  $displayEncryptText.style.textAlign = 'left';
-  $displayEncryptText.innerHTML = encryptText;
-  setElementText($displayEncryptText, encryptText);
-  $text = d.querySelector('#text').value = '';
 
+  updateDOMElements(encryptText);
+  
   // return encryptText;
+}
+
+function decryptText() {
+
+  // elementos del DOM
+  let $text = d.querySelector('#text').value;
+
+  // Validaciones
+  if (!textareaValidation($text)) return;
+
+  Object.keys(decryptionRules).forEach((char) => {
+    const regex = new RegExp(char, 'g');
+    $text = $text.replace(regex, decryptionRules[char]);
+  });
+
+  updateDOMElements($text)
+
 }
 
 /**
@@ -101,3 +115,33 @@ function textareaValidation(text) {
 
   return true;
 }
+
+// function clearTextarea() {
+//   d.querySelector('#text').value = '';
+// }
+
+/**
+ * 
+ * @param {string} text 
+ */
+function updateDOMElements(text){
+
+  // Selecciona y actualiza los elementos del DOM
+  const displayEncryptText = d.querySelector('#p');
+  const containerMessage = d.querySelector('#container-message');
+  const containerTextDecrypt = d.querySelector('#container-textDecrypt');
+
+  // Configura los estilos y actualiza el contenido HTML
+  containerMessage.style.display = 'none';
+  containerTextDecrypt.style.display = 'flex';
+  displayEncryptText.style.fontSize = '24px';
+  displayEncryptText.style.color = '#495057';
+  displayEncryptText.style.textAlign = 'left';
+  displayEncryptText.innerHTML = text;
+  setElementText(displayEncryptText, text); 
+
+  // Limpia el textarea
+  document.querySelector('#text').value = '';
+
+}
+
