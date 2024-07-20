@@ -24,6 +24,7 @@ const decryptionRules = {
 function encryptText() {
   // elementos del DOM
   let $text = d.querySelector('#text').value;
+  const $warning = getWarningElement();
 
   // Validaciones
   if (!textareaValidation($text)) return;
@@ -44,6 +45,7 @@ function encryptText() {
   }
 
   updateDOMElements(encryptText);
+  setElementText($warning, 'Texto encriptado')
 }
 
 /**
@@ -53,6 +55,7 @@ function decryptText() {
 
   // elementos del DOM
   let $text = d.querySelector('#text').value;
+  const $warning = getWarningElement();
 
   // Validaciones
   if (!textareaValidation($text)) return;
@@ -68,6 +71,7 @@ function decryptText() {
   });
 
   updateDOMElements($text);
+  setElementText($warning, 'Texto desencriptado')
 }
 
 /**
@@ -76,7 +80,7 @@ function decryptText() {
 function copyButton() {
   const $copyTextElement = document.getElementById('p');
   const $copyText = $copyTextElement.innerText;
-  const $warning = d.getElementById('warning');
+  const $warning = getWarningElement();
 
   // Crear un objeto Range
   const range = document.createRange();
@@ -122,7 +126,7 @@ function copyButton() {
  * @returns {boolean}
  */
 function textareaValidation(text) {
-  const $warning = d.querySelector('#warning');
+  const $warning = getWarningElement();
 
   /* 
       Expresión regular:
@@ -187,4 +191,13 @@ function updateDOMElements(text) {
  */
 function setElementText(element, text) {
   element.innerHTML = text;
+}
+
+
+/**
+ * obtiene el elemento html con el id warning
+ * @returns {HTMLParagraphElement}
+ */
+function getWarningElement() {
+  return document.getElementById('warning');
 }
