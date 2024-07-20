@@ -242,7 +242,6 @@ svg {
 @media (min-width: 735px) {
   .btn-encrypt {
     margin-right: 2.4rem;
-    
   }
 }
 
@@ -288,7 +287,6 @@ svg {
 @media (min-width: 1024px) {
   .display-text-decrypt {
     width: 350px;
-    /* min-height: 725px; */
     min-height: 758px;
     display: flex;
     flex-direction: column;
@@ -301,7 +299,6 @@ svg {
 @media (min-width: 1280px) {
   .display-text-decrypt {
     width: 400px;
-    /* min-height: 725px; */
     min-height: 756px;
   }
 }

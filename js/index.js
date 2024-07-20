@@ -11,21 +11,23 @@ const encryptionRules = {
 };
 
 const decryptionRules = {
-  'ai': 'a',
-  'enter': 'e',
-  'imes': 'i',
-  'ober': 'o',
-  'ufat': 'u'
+  ai: 'a',
+  enter: 'e',
+  imes: 'i',
+  ober: 'o',
+  ufat: 'u',
 };
 
+/**
+ * Encripta el texto ingresado
+ */
 function encryptText() {
-
   // elementos del DOM
   let $text = d.querySelector('#text').value;
 
   // Validaciones
   if (!textareaValidation($text)) return;
-  
+
   let encryptText = '';
 
   // iteramos el texto ingresado
@@ -41,13 +43,12 @@ function encryptText() {
     }
   }
 
-  console.log(encryptText);
-
   updateDOMElements(encryptText);
-  
-  // return encryptText;
 }
 
+/**
+ * Desencripta el texto 
+ */
 function decryptText() {
 
   // elementos del DOM
@@ -58,7 +59,7 @@ function decryptText() {
 
   // devuelve un array de keys que iteramos
   Object.keys(decryptionRules).forEach((char) => {
-    
+
     // define el patrón de busqueda con la variable `char` que son las `key` del objeto `decryptionRules`
     const regex = new RegExp(char, 'g');
 
@@ -66,28 +67,61 @@ function decryptText() {
     $text = $text.replace(regex, decryptionRules[char]);
   });
 
-  updateDOMElements($text)
-
+  updateDOMElements($text);
 }
 
 /**
- * establece el texto de un elemento
- * 
- * @param {HTMLElement} element
- * @param {string} text
+ * Copia al portapales el texto encriptado/desencriptado
  */
-function setElementText(element, text) {
-  element.innerHTML = text;
+function copyButton() {
+  const $copyTextElement = document.getElementById('p');
+  const $copyText = $copyTextElement.innerText;
+  const $warning = d.getElementById('warning');
+
+  // Crear un objeto Range
+  const range = document.createRange();
+
+  // Seleccionar el contenido del nodo:
+  range.selectNodeContents($copyTextElement);
+
+  // Obtener la selección actual
+  const selection = window.getSelection();
+
+  // Limpiar cualquier selección existente
+  selection.removeAllRanges();
+
+  // Añadir el nuevo rango a la selección
+  selection.addRange(range);
+
+  // `try/catch` captura errores inmediatos que ocurren al intentar utilizar la Clipboard API.
+  try {
+    navigator.clipboard
+      .writeText($copyText)
+      // `then/catch` captura errores que ocurren después de que la llamada a la API se haya iniciado y devuelve una promesa que se rechaza.
+      .then(() => {
+        console.log('Texto copiado al portapapeles');
+        setElementText($warning, 'Texto copiado al portapapeles');
+      })
+      .catch((err) => {
+        console.error('Error al copiar el texto: ', err);
+        // Fallback para dispositivos que no soportan la API del portapapeles
+        document.execCommand('copy');
+      });
+  } catch (err) {
+    console.error('Error al intentar usar la API del portapapeles: ', err);
+    // Fallback para dispositivos que no soportan la API del portapapeles
+    document.execCommand('copy');
+    setElementText($warning, 'Texto copiado al portapapeles');
+  }
 }
 
 /**
  *  validaciones
- * 
+ *
  * @param {string} text
  * @returns {boolean}
  */
 function textareaValidation(text) {
-  
   const $warning = d.querySelector('#warning');
 
   /* 
@@ -121,16 +155,12 @@ function textareaValidation(text) {
   return true;
 }
 
-// function clearTextarea() {
-//   d.querySelector('#text').value = '';
-// }
-
 /**
+ * Actualiza los elementos del DOM que se muestran en pantalla
  * 
- * @param {string} text 
+ * @param {string} text
  */
-function updateDOMElements(text){
-
+function updateDOMElements(text) {
   // Selecciona y actualiza los elementos del DOM
   const displayEncryptText = d.querySelector('#p');
   const containerMessage = d.querySelector('#container-message');
@@ -143,10 +173,18 @@ function updateDOMElements(text){
   displayEncryptText.style.color = '#495057';
   displayEncryptText.style.textAlign = 'left';
   displayEncryptText.innerHTML = text;
-  setElementText(displayEncryptText, text); 
+  setElementText(displayEncryptText, text);
 
   // Limpia el textarea
   d.querySelector('#text').value = '';
-
 }
 
+/**
+ * Establece el texto de un elemento
+ *
+ * @param {HTMLElement} element
+ * @param {string} text
+ */
+function setElementText(element, text) {
+  element.innerHTML = text;
+}
