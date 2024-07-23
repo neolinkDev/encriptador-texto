@@ -193,7 +193,6 @@ function setElementText(element, text) {
   element.innerHTML = text;
 }
 
-
 /**
  * obtiene el elemento html con el id warning
  * @returns {HTMLParagraphElement}
@@ -201,3 +200,14 @@ function setElementText(element, text) {
 function getWarningElement() {
   return document.getElementById('warning');
 }
+
+/**
+ * Muestra el año actual en el footer
+ */
+const yearFn = () => {
+  const $year = d.getElementById('year');
+  const currentYear = new Date().getFullYear();
+  $year.textContent = currentYear;
+};
+
+yearFn();
